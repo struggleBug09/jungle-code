@@ -21,8 +21,12 @@
           <div class="card-header">Categories</div>
           <div class="card-body">
             <h5 class="card-title"><%= @category_count %> Categories</h5>
-            <p class="card-text">Total number of categories in the database.</p>
-            <a href="<%= admin_categories_path %>" class="btn btn-light">View Categories</a>
+            <p class="card-text">Total number of categories in the database:</p>
+            <ul class="list-group">
+              <% @categories.each do |category| %>
+                <li class="list-group-item"><%= category.name %></li>
+              <% end %>
+            </ul>
           </div>
         </div>
       </div>
