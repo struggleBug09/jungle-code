@@ -12,17 +12,6 @@
 <body>
   <%= render 'layouts/top_nav' %>
   <main class="container">
-    <% if session[:user_id] %>
-      <p>Signed in as <%= User.find(session[:user_id]).email %></p>
-      <%= link_to 'Logout', '/logout', method: :delete, class: 'btn btn-secondary' %>
-    <% else %>
-      <% unless current_page?(login_path) %>
-        <%= link_to 'Login', '/login', class: 'btn btn-primary' %> 
-      <% end %>
-      <% unless current_page?(signup_path) %>
-        <%= link_to 'Signup', '/signup', class: 'btn btn-secondary' %>
-      <% end %>
-    <% end %>
     <%= yield %>
   </main>
   <%= yield :end_of_body %>
