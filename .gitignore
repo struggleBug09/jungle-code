@@ -11,6 +11,7 @@
 ## Environment normalization:
 /.bundle
 /vendor/bundle
+yarn.lock
 
 # Ignore db creds / settings
 /config/database.yml
